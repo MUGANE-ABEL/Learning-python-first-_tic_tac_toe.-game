@@ -1,18 +1,16 @@
-game = [[1,1,1],[0,2,0],[2,2,0]]
+game = [[2,0,1],
+        [1,0,0],
+        [1,2,0]]
 
-horizontally
-vertically
-diagonally
+def win(current_game):
+    for row in game:
+        print (row)
+        if row.count(row[0]) == len(row) and row[0] != 0:
+            print ("winner!!!")
+win(game)
+ 
 
-
-
-def zuku():
-    print ("   0, 1, 2")
-    for count, line in enumerate(game):
-        print(count, line)
-
-zuku()
-
+ 
 
 
 
@@ -31,8 +29,7 @@ zuku()
 
 
 
-
-
+#Error handling example
 '''game = [[0, 0, 0], [0, 0, 0], [0, 0, 0],]
 
 
@@ -75,6 +72,11 @@ game_board(1,2,1)
 #game[0][1] = 1
 #game_board()'''
 
+
+### Exercise test to see wherther you can,
+#by hand calculation,
+#predict what running the following codes
+#is going to output {it is a test of understanding of indexes and slices}
 '''x = 1
 def test(): 
     x = 2
