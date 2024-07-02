@@ -1,6 +1,6 @@
 game = [[1,0,2],
-        [1,1,0],
-        [1,2,1]]
+        [1,2,0],
+        [2,2,1]]
 
 
 
@@ -40,35 +40,7 @@ def win(current_game):
             print (f"Player {check[0]} is the winner vertically!")
 
 
-
-win(game)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Error handling example
-'''game = [[0, 0, 0], [0, 0, 0], [0, 0, 0],]
-
-
-
+# With errors handled
 def game_board(game_map, player=0, row=0, column=0, just_display=False):
     try:
         print ("   0, 1, 2")
@@ -80,12 +52,34 @@ def game_board(game_map, player=0, row=0, column=0, just_display=False):
     except IndexError as e:
         print("Error: did you input row/column as 0,1,2", e)
     except Exception as e:
-        print("Something went very wrong") 
+        print("Something went very wrong", e) 
 
 
 game= game_board(game, just_display=True)
-game= game_board(game_board , player="x", row=5, column=2)
-'''
+game= game_board(game_board, player=1, row=3, column=1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
