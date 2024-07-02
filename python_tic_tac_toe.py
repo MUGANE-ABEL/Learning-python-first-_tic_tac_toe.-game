@@ -1,4 +1,6 @@
 import itertools
+from colorama import Fore, Back, Style
+
 
 #dymnac game size
 '''game_size = int(input("What game size of tic tac toe would you like? "))
@@ -68,8 +70,16 @@ def game_board(game_map, player=0, row=0, column=0, just_display=False):
         print ("   "+ "  ".join([str(i) for i in range(len(game_map))]))
         if not just_display:
             game_map[row][column]= player
-        for count, row in enumerate(game_map):        
-            print(count, row)
+        for count, row in enumerate(game_map): 
+            colored_row= ""
+            for item in row:
+                 if item == 0:
+                      colored_row += " "
+                 elif item == 1:
+                      colored_row += Fore.GREEN + ' X ' + Style.RESET_ALL
+                 elif item == 2:
+                      colored_row += Fore.MAGENTA + ' O ' + Style.RESET_ALL      
+            print(count, colored_row)
         return game_map, True
     except IndexError as e:
         print("Error: did you input row/column as 0,1,2", e)
