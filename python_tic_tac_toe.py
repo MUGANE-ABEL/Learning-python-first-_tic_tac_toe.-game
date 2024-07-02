@@ -74,7 +74,7 @@ def game_board(game_map, player=0, row=0, column=0, just_display=False):
             colored_row= ""
             for item in row:
                  if item == 0:
-                      colored_row += " "
+                      colored_row += "   "
                  elif item == 1:
                       colored_row += Fore.GREEN + ' X ' + Style.RESET_ALL
                  elif item == 2:
